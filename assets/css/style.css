@@ -1,0 +1,96 @@
+
+
+/* (Dim Gray) #6d6373
+(Dark Gray) #a094a6
+(Rosy Brown) #b8847d
+(Eucalyptus) #9bb4ae
+(Gainsboro) #d9d9d9 */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+main {
+    background-color: #e8e8e8;
+    position: relative;
+    flex: 1 0 auto;
+    z-index: 1;
+}
+
+.nav-wrapper {
+    background-color: #6d6373;
+}
+
+.nav-content {
+    background-color: #a094a6;
+}
+
+.welcome-image {
+    background-image: url(../images/train-short.jpeg);
+    background-size: cover;
+    height: 600px;
+    padding: 0px;
+    margin: 0;
+}
+
+#welcome {
+    padding: 500px 20px 20px 20px;
+    margin: 0;
+    font-size: 80px;
+    color: black;
+}
+
+#container-interests {
+    height: auto;
+    width: 80%;
+    background-color: #ffffff;
+}
+
+.content, h5 {
+    color: #6d6373;
+    text-align: left;
+    padding: 10px;
+    margin: 0;
+}
+
+h5 {
+    margin: 0;
+}
+
+.icon {
+    padding: 10px 0 0 10px;
+}
+
+.card {
+    margin: 20px 0 0 0;
+}
+
+.card-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+.card-title {
+    margin: 0;
+}
+
+.social-media {
+    height: 50px;
+    width: 50px;
+    margin: 3px;
+}
+
+.page-footer {
+    background-color: #a094a6;
+}
+
+.footer-copyright {
+    background-color: #6d6373;
+}
