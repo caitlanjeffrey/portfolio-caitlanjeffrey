@@ -1,5 +1,5 @@
 
-
+/* Main APP Colors */
 /* (Dim Gray) #6d6373
 (Dark Gray) #a094a6
 (Rosy Brown) #b8847d
@@ -13,84 +13,122 @@ body {
     color: #ffffff;
 }
 
-main {
-    background-color: #e8e8e8;
-    position: relative;
-    flex: 1 0 auto;
-    z-index: 1;
-}
+/* Header */
+    /* Navigation */
+        .nav-wrapper {
+            background-color: #6d6373;
+        }
 
-.nav-wrapper {
-    background-color: #6d6373;
-}
+        .nav-content {
+            background-color: #a094a6;
+        }
 
-.nav-content {
-    background-color: #a094a6;
-}
+        nav .brand-logo {
+            padding: 0 0 0 24px;
+        }
 
-.welcome-image {
-    background-image: url(../images/train-short.jpeg);
-    background-size: cover;
-    height: 600px;
-    padding: 0px;
-    margin: 0;
-}
+/* Main Section */
+    main {
+        background-color: #e8e8e8;
+        position: relative;
+        flex: 1 0 auto;
+        z-index: 1;
+    }
 
-#welcome {
-    padding: 500px 20px 20px 20px;
-    margin: 0;
-    font-size: 80px;
-    color: black;
-}
+    .welcome-image {
+        background-image: url(../images/train-short.jpeg);
+        background-size: cover;
+        height: 600px;
+        padding: 0px;
+        margin: 0;
+    }
 
-#container-interests {
-    height: auto;
-    width: 80%;
-    background-color: #ffffff;
-}
+    #welcome {
+        padding: 500px 20px 20px 20px;
+        margin: 0;
+        font-size: 80px;
+        color: black;
+    }
 
-.content, h5 {
-    color: #6d6373;
-    text-align: left;
-    padding: 10px;
-    margin: 0;
-}
+    /* Content & Containers */
+        #container-interests {
+            height: auto;
+            width: 80%;
+            background-color: #ffffff;
+        }
 
-h5 {
-    margin: 0;
-}
+        .content, h5 {
+            color: #6d6373;
+            text-align: left;
+            padding: 10px;
+            margin: 0;
+        }
 
-.icon {
-    padding: 10px 0 0 10px;
-}
+        h5 {
+            margin: 0;
+        }
 
-.card {
-    margin: 20px 0 0 0;
-}
+        .icon {
+            padding: 10px 0 0 10px;
+        }
 
-.card-icon {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 30px;
-    width: 30px;
-    margin: 10px;
-}
+    /* Card Views */
+        .card {
+            margin: 20px 0 0 0;
+        }
 
-.card-title {
-    margin: 0;
-}
+        .card-icon {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 30px;
+            width: 30px;
+            margin: 10px;
+        }
 
-.social-media {
-    height: 50px;
-    width: 50px;
-    margin: 3px;
-}
+        .card-title {
+            margin: 0;
+        }
 
-.page-footer {
-    background-color: #a094a6;
-}
+    /* Input Form */
+        /* label color */
+        .input-field label {
+            color: #b8847d;
+        }
+        /* label focus color */
+        .input-field input[type=text]:focus + label {
+            color: #b8847d;
+        }
+        /* label underline focus color */
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+            color: #b8847d;
+        }
+        /* valid color */
+        .input-field input[type=text].valid {
+            border-bottom: 1px solid #9bb4ae;
+            box-shadow: 0 1px 0 0 #9bb4ae;
+            color: #9bb4ae;
+        }
+        /* invalid color */
+        .input-field input[type=text].invalid {
+            border-bottom: 1px solid red;
+            box-shadow: 0 1px 0 0 red;
+            color: red;
+        }
 
-.footer-copyright {
-    background-color: #6d6373;
-}
+/* Footer */
+    .social-media {
+        height: 50px;
+        width: 50px;
+        margin: 3px;
+    }
+
+    .page-footer {
+        background-color: #a094a6;
+    }
+
+    .footer-copyright {
+        background-color: #6d6373;
+    }
