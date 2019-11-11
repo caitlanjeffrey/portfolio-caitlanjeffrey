@@ -41,8 +41,16 @@ body {
         z-index: 1;
     }
 
-    .welcome-image {
-        background-image: url(../images/train-short.jpeg);
+    .database-image {
+        background-image: url(../images/database-short.jpeg);
+        background-size: cover;
+        height: 600px;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .train-image {
+        background-image: url(../images/database/amtrak-train-ventura-california.jpg);
         background-size: cover;
         height: 600px;
         padding: 0px;
@@ -57,7 +65,7 @@ body {
     }
 
     /* Content & Containers */
-        #container-interests {
+        #database, #train-game {
             height: auto;
             width: 80%;
             background-color: #ffffff;

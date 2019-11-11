@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Materialze -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Project CSS -->
+    <link rel="stylesheet" href="./assets/css/database.css">
+
+    <!-- Icons recieved from: (https://icons8.com/icons)-->
+
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="navbar-fixed">
+            <nav class="nav-extended" id="navbar-1">
+                <div class="nav-wrapper">
+                    <a href="./index.html" class="brand-logo">Caitlan Jeffrey</a>
+
+                    <!-- <a target="_blank" href="/icons/set/hamburger">Hamburger icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img src="./assets/images/icons/hamburger.png" class="hamburger"></a>
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li><a href="./index.html" id="nav-first">HOME</a></li>
+                            <li><a href="./games.html" id="nav-first">GAMES</a></li>
+                            <li><a href="./api.html" id="nav-second">API'S</a></li>
+                            <li><a href="./databases.html" id="nav-thrid">DATABASES</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Tabs -->
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="waves-effect waves-light" id="train-schedule-show">Train Schedule</a></li>
+            </ul>
+        </div>
+
+        <ul class="sidenav" id="mobile-demo">
+            <nav class="nav-extended" id="navbar-1">
+                <div class="nav-wrapper">
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img src="./assets/images/icons/hamburger.png" class="hamburger"></a>
+                </div>
+            </nav>
+                <li><a href="./index.html" id="nav-first">HOME</a></li>
+                <li><a href="./games.html">GAMES</a></li>
+                <li><a href="./api.html">API'S</a></li>
+                <li><a href="./databases.html">DATABASES</a></li>
+        </ul>
+    </header>
+
+    <main id="main">
+        <div class="database-image">
+            <h3 id="welcome"></h3>
+
+            <div class="container" id="database">
+                <div class="row">
+                    <div class="col s12 m12 section">
+                        <div class="section-title">
+                            <!-- <a target="_blank" href="/icons/set/person-female">Person Female icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+                            <a><img src="./assets/images/icons/female-icon.png" class="icon"></a>
+                            <h5>About Me</h5>
+                        </div>
+                        <div class="section-content">
+                            <p class="content">I'm a California native, that has spent the last 10-years of my life living in Oklahoma. I attended Oklahoma State University in Stillwater, majoring in Animal Science - Agricultural Education Double Major. The pursuing my Animal Science degree, I also spent time as a student teacher in southwest Oklahoma. I graduated from Oklahoma State University in 2012, completing my majors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="train-game">
+                <div class="row">
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- two cards m6 -->
+        <div class="row">
+            <div class="col s12 m6" id="show-gallery-here">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./assets/images/gallery/out-west.jpeg">
+                    </div>
+                    <div class="card-content">
+                        <h6 class="card-title grey-text text-darken-4">Killers Of The Flower Moon</h6>
+                        <div class="card-action">
+                                <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./assets/images/gallery/out-west.jpeg">
+                    </div>
+                    <div class="card-content">
+                        <h6 class="card-title grey-text text-darken-4">Killers Of The Flower Moon</h6>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main id="train">
+        <div class="train-image">
+            <h3 id="welcome"></h3>
+
+            <div class="container" id="train-game">
+                <div class="row">
+                    <div class="col s12 m12 section">
+                        <a class="waves-effect waves-light btn" id="buy-tickets">Tickets</a>
+                        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="departures">Schedule</a>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row" id="book-tickets">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="Enter Train Name" id="train-name" type="text" class="validate">
+                                <label for="train-name">Train (Company)</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="destination" type="text" class="validate">
+                                <label for="destination">Destination (City, State)</label>
+                            </div>
+                        </div>
+        
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="Time First Train Leaves Station" id="first-train" type="text" class="validate">
+                                <label for="first-train">First Train (Military Time)</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="frequency" type="text" class="validate">
+                                <label for="frequency">Frequency of Train Arrivals (Minutes)</label>
+                            </div>
+                        </div>
+                        <a class="waves-effect waves-light btn" id="submit">Buy Tickets</a>
+                    </form>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Desination</th>
+                            <th scope="col">Frequency (Mins)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Till Arrival</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+                <div class="card" id="green-energy">
+                    <img src="./assets/images/green.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Green Energy is the new fuel!</p>
+                    </div>
+                </div>
+                <div class="card-columns">
+                    <div class="card">
+                        <img src="./assets/images/train.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Frieght</h5>
+                            <p class="card-text">TRail carries the most freight by ton-miles (a unit of measurement where one ton of freight moves one mile). Rail accounts for 39.5% of U.S. freight by ton-miles, while trucks accounts for only 29% of ton-miles.</p>
+                        </div>
+                    </div>
+                    <div class="card p-3 text-right">
+                        <blockquote class="blockquote mb-0">
+                        <p>A single rail car can carry enough grain to make 258,000 loaves of bread.</p>
+                            <footer class="blockquote-footer"></footer>
+                        </blockquote>
+                    </div>
+                    <div class="card p-3">
+                        <blockquote class="blockquote mb-0 card-body">
+                            <p>The best way to see a country is from the footplate of a locomotive.</p>
+                            <footer class="blockquote-footer">
+                                <small class="text-muted">
+                                <cite title="Source Title">George Dow</cite>
+                                </small>
+                            </footer>
+                        </blockquote>
+                    </div>
+                    <div class="card bg-primary text-white text-center p-3">
+                        <blockquote class="blockquote mb-0">
+                            <p>“When I was young 
+                                I wanted to be just like him.
+                                One of the charm, of a bright orange smile
+                                and muscular laughter.
+                                Bold brown eyes flashing fearless
+                                when he sat not alone
+                                on cold blue nights
+                                in empty boxcars.
+                                    
+                                Riding a freight train's
+                                solitary wail
+                                away from Nebraska
+                                Depression, accompanying dreams
+                                withered farms.
+                                Nothing left but the
+                                leaves of possibilities.”
+                            </p>
+                            <footer class="blockquote-footer text-white">
+                                <small>
+                                <cite title="Source Title">Larsen Bowker</cite>
+                                </small>
+                            </footer>
+                        </blockquote>
+                    </div>
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Facts</h5>
+                            <p class="card-text">Rail freight is environmentally friendly. Moving freight by rail instead of by truck requires 75% fewer greenhouse gas emissions.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/okc-station.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Great Depression</h5>
+                            <p class="card-text">“From ‘middle class gentility to scrabble-ass poor,’ the undiscriminating Great Depression forced 4,000,000 Americans away from their homes and onto the tracks in search of food and lodging."</p>
+                        </div>
+                    </div>
+            
+                </div>
+            
+            <!-- Modal Structure -->
+                <div id="modal1" class="modal modal-fixed-footer">
+                        <h4>Students Save 20% on Select California Routes!</h4>
+                    <div class="modal-footer">
+                        <a href="#modal1" class="modal-close waves-effect waves-light btn btn-flat">Close</a>
+                    </div>
+                </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://github.com/caitlanjeffrey">
+                                <img src="./assets/images/icons/github.png" class="social-media">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">
+                                <img src="./assets/images/icons/linkedin.png" class="social-media">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">© 2019 Copyright
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    
+    <!-- Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Project JavaScript-->
+    <script src="./assets/javascript/train.js"></script>
+
+</body>
+</html>
