@@ -119,11 +119,11 @@
             <h3 id="welcome"></h3>
 
             <div class="container" id="train-game">
-                <div class="row">
-                    <div class="col s12 m12 section">
-                        <a class="waves-effect waves-light btn" id="buy-tickets">Tickets</a>
-                        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="departures">Schedule</a>
-                    </div>
+                <div class="train-nav">
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab"><a class="waves-effect waves-light" id="buy-tickets">Tickets</a></li>
+                        <li class="tab"><a class="waves-effect waves-light modal-trigger" href="#modal2">Schedule</a></li>
+                    </ul>
                 </div>
 
                 <br>
@@ -172,87 +172,35 @@
                 </table>
             </div>
         </div>
-                <div class="card" id="green-energy">
-                    <img src="./assets/images/green.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Green Energy is the new fuel!</p>
+
+        <!-- green train advertisement -->
+        <div class="row">
+            <div class="col s12 m6" id="cards">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./assets/images/database/green.jpg">
+                    </div>
+                    <div class="card-content">
+                        <h6 class="card-title grey-text text-darken-4">Killers Of The Flower Moon</h6>
+                        
+                        <!-- <a target="_blank" href="/icons/set/plus">Plus icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+                        <img src="./assets/images/icons/plus.png" class="card-icon activator">
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Killers Of The Flower Moon<i class="material-icons right">X</i></span>
+                        <p class="content">In the 1920s, the richest people per capita in the world were members of the Osage Nation in Oklahoma. After oil was discovered beneath their land, the Osage rode in chauffeured automobiles, built mansions, and sent their children to study in Europe.</p>
                     </div>
                 </div>
-                <div class="card-columns">
-                    <div class="card">
-                        <img src="./assets/images/train.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Frieght</h5>
-                            <p class="card-text">TRail carries the most freight by ton-miles (a unit of measurement where one ton of freight moves one mile). Rail accounts for 39.5% of U.S. freight by ton-miles, while trucks accounts for only 29% of ton-miles.</p>
-                        </div>
-                    </div>
-                    <div class="card p-3 text-right">
-                        <blockquote class="blockquote mb-0">
-                        <p>A single rail car can carry enough grain to make 258,000 loaves of bread.</p>
-                            <footer class="blockquote-footer"></footer>
-                        </blockquote>
-                    </div>
-                    <div class="card p-3">
-                        <blockquote class="blockquote mb-0 card-body">
-                            <p>The best way to see a country is from the footplate of a locomotive.</p>
-                            <footer class="blockquote-footer">
-                                <small class="text-muted">
-                                <cite title="Source Title">George Dow</cite>
-                                </small>
-                            </footer>
-                        </blockquote>
-                    </div>
-                    <div class="card bg-primary text-white text-center p-3">
-                        <blockquote class="blockquote mb-0">
-                            <p>“When I was young 
-                                I wanted to be just like him.
-                                One of the charm, of a bright orange smile
-                                and muscular laughter.
-                                Bold brown eyes flashing fearless
-                                when he sat not alone
-                                on cold blue nights
-                                in empty boxcars.
-                                    
-                                Riding a freight train's
-                                solitary wail
-                                away from Nebraska
-                                Depression, accompanying dreams
-                                withered farms.
-                                Nothing left but the
-                                leaves of possibilities.”
-                            </p>
-                            <footer class="blockquote-footer text-white">
-                                <small>
-                                <cite title="Source Title">Larsen Bowker</cite>
-                                </small>
-                            </footer>
-                        </blockquote>
-                    </div>
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Facts</h5>
-                            <p class="card-text">Rail freight is environmentally friendly. Moving freight by rail instead of by truck requires 75% fewer greenhouse gas emissions.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/okc-station.jpg" class="card-img-top" alt="...">
-                    </div>
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Great Depression</h5>
-                            <p class="card-text">“From ‘middle class gentility to scrabble-ass poor,’ the undiscriminating Great Depression forced 4,000,000 Americans away from their homes and onto the tracks in search of food and lodging."</p>
-                        </div>
-                    </div>
-            
-                </div>
-            
-            <!-- Modal Structure -->
-                <div id="modal1" class="modal modal-fixed-footer">
-                        <h4>Students Save 20% on Select California Routes!</h4>
-                    <div class="modal-footer">
-                        <a href="#modal1" class="modal-close waves-effect waves-light btn btn-flat">Close</a>
-                    </div>
-                </div>
+            </div>
+        </div>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal modal-fixed-footer">
+            <h4>Students Save 20% on Select California Routes!</h4>
+            <div class="modal-footer">
+                <a href="#modal1" class="modal-close waves-effect waves-light btn btn-flat">Close</a>
+            </div>
+        </div>
     </main>
 
     <footer class="page-footer">

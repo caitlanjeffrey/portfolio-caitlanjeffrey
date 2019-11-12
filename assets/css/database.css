@@ -23,6 +23,12 @@ body {
             background-color: #a094a6;
         }
 
+        .train-nav {
+            width: 100%;
+        }
+        .tab {
+            width: 50%;
+        }
         nav .brand-logo {
             padding: 0 0 0 24px;
         }
@@ -103,8 +109,9 @@ body {
         .card-title {
             margin: 0;
         }
-
+    
     /* Input Form */
+
         /* label color */
         .input-field label {
             color: #b8847d;
@@ -131,6 +138,20 @@ body {
             box-shadow: 0 1px 0 0 red;
             color: red;
         }
+
+#book-tickets {
+    width: inherit;
+}
+
+#buy-tickets, #departures {
+    width: 50%;
+    height: 40px;
+    padding: 0;
+    color: #ffffff;
+    background-color: #0c40e6;
+    border-radius: 0;
+    border-right-color: #ffffff 3px;
+}
 
 /* Modal */
     #modal2 {
