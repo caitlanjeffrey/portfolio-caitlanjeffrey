@@ -1,13 +1,67 @@
 
 
 $(document).ready(function(){
+    if ($(window).width() < 600) {
+        $('.modal-show').hide()
+
+        $("#resume").on("click", function(){
+            $("#container-resume").show()
+            $("#container-interests").hide()
+            $("#container-contact").hide()
+            $(".cards").hide()
+        })
+        
+        $("#contact").on("click", function(){
+            $("#container-contact").show()
+            $("#container-interests").hide()
+            $("#container-resume").hide()
+            $(".cards").hide()
+        })
+        
+        // needs fixing
+        $("#gallery").on("click", function(){
+            $("#container-interests").show()
+            $("#container-contact").hide()
+            $("#container-resume").hide()
+        })
+    }
+
+    else {
+        $('.modal-show').show()
+        $('.non-modal').hide()
+    }
+
     // mobile responsive sidenav
     $('.sidenav').sidenav();
 
-    // modal for contact section
-    $('.modal').modal();
-
+    // modal trigger
+    $('.modal').modal()
+    
+    $("#container-resume").hide()
+    $("#container-contact").hide()
 });
+
+// $("#resume").on("click", function(){
+//     $("#container-resume").show()
+//     $("#container-interests").hide()
+//     $("#container-contact").hide()
+//     $(".cards").hide()
+// })
+
+// $("#contact").on("click", function(){
+//     $("#container-contact").show()
+//     $("#container-interests").hide()
+//     $("#container-resume").hide()
+//     $(".cards").hide()
+// })
+
+// needs fixing
+// $("#gallery").on("click", function(){
+//     $("#container-interests").show()
+//     $("#container-contact").hide()
+//     $("#container-resume").hide()
+// })
+
 
 // FIREBASE CONFIGURATION
     var firebaseConfig = {

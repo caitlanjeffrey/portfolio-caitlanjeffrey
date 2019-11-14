@@ -74,12 +74,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="container" id="train-game">
-                <div class="row">
-                    
-                </div>
-            </div>
         </div>
 
         <!-- two cards m6 -->
@@ -119,13 +113,11 @@
             <h3 id="welcome"></h3>
 
             <div class="container" id="train-game">
-                <div class="train-nav">
-                    <ul class="tabs tabs-transparent">
-                        <li class="tab"><a class="waves-effect waves-light" id="buy-tickets">Tickets</a></li>
-                        <li class="tab"><a class="waves-effect waves-light modal-trigger" href="#modal2">Schedule</a></li>
-                    </ul>
+                <div class="row train-nav">
+                    <a class="tab waves-effect waves-light" id="buy-tickets">Tickets</a>
+                    <a class="tab waves-effect waves-light modal-trigger" href="#modal2" id="departures">Schedule</a>
                 </div>
-
+            
                 <br>
 
                 <div class="row" id="book-tickets">
@@ -136,7 +128,7 @@
                                 <label for="train-name">Train (Company)</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="destination" type="text" class="validate">
+                                <input placeholder="Sacramento, CA" id="destination" type="text" class="validate">
                                 <label for="destination">Destination (City, State)</label>
                             </div>
                         </div>
@@ -147,7 +139,7 @@
                                 <label for="first-train">First Train (Military Time)</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="frequency" type="text" class="validate">
+                                <input placeholder="15 mins" id="frequency" type="text" class="validate">
                                 <label for="frequency">Frequency of Train Arrivals (Minutes)</label>
                             </div>
                         </div>
@@ -167,6 +159,11 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td class="example">Example: Amtrak</td>
+                            <td class="example">Oakland, CA</td>
+                            <td class="example">Every 65 mins</td>
+                            <td class="example">8:05am</td>
+                            <td class="exmaple">16 mins</td>
                         </tr> 
                     </tbody>
                 </table>
@@ -175,24 +172,38 @@
 
         <!-- green train advertisement -->
         <div class="row">
-            <div class="col s12 m6" id="cards">
+            <div class="col s12 m6" id="show-gallery-here">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="./assets/images/database/green.jpg">
+                            <img class="activator" src="./assets/images/gallery/out-west.jpeg">
+                        </div>
+                        <div class="card-content">
+                            <h6 class="card-title grey-text text-darken-4">Killers Of The Flower Moon</h6>
+                            
+                            <!-- <a target="_blank" href="/icons/set/plus">Plus icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+                            <img src="./assets/images/icons/plus.png" class="card-icon activator">
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Killers Of The Flower Moon<i class="material-icons right">X</i></span>
+                            <p class="content">In the 1920s, the richest people per capita in the world were members of the Osage Nation in Oklahoma. After oil was discovered beneath their land, the Osage rode in chauffeured automobiles, built mansions, and sent their children to study in Europe.</p>
+                            <p class="content">Then, one by one, the Osage began to be killed off. The family of an Osage woman, Mollie Burkhart, became a prime target. One of her relatives was shot. Another was poisoned. And it was just the beginning, as more and more Osage were dying under mysterious circumstances, and many of those who dared to investigate the killings were themselves murdered.</p>
+                            <p class="content">As the death toll rose, the newly created FBI took up the case, and the young director, J. Edgar Hoover, turned to a former Texas Ranger named Tom White to try to unravel the mystery. White put together an undercover team, including a Native American agent who infiltrated the region, and together with the Osage began to expose one of the most chilling conspiracies in American history.</p>
+                            <p class="content">Penguin Random House <span>Author David Grann</span></p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <h6 class="card-title grey-text text-darken-4">Killers Of The Flower Moon</h6>
-                        
-                        <!-- <a target="_blank" href="/icons/set/plus">Plus icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
-                        <img src="./assets/images/icons/plus.png" class="card-icon activator">
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Killers Of The Flower Moon<i class="material-icons right">X</i></span>
-                        <p class="content">In the 1920s, the richest people per capita in the world were members of the Osage Nation in Oklahoma. After oil was discovered beneath their land, the Osage rode in chauffeured automobiles, built mansions, and sent their children to study in Europe.</p>
+                </div>
+    
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="./assets/images/gallery/bull.jpeg">
+                        </div>
+                        <div class="card-content">
+                            <h6 class="card-title grey-text text-darken-4">No Bull</h6>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
         <!-- Modal Structure -->
         <div id="modal1" class="modal modal-fixed-footer">

@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Project CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="./assets/css/small-screen.css">
+    <link rel="stylesheet" media="screen and (min-width: 601px" href="./assets/css/medium-screen.css">
+    <link rel="stylesheet" media="screen and (min-width: 1000px)" href="./assets/css/large-screen.css">
+
+    <!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css"> -->
 
     <!-- Icons recieved from: (https://icons8.com/icons)-->
 
@@ -38,20 +42,25 @@
         <!-- Tabs -->
         <div class="nav-content">
             <ul class="tabs tabs-transparent">
+                <!-- Non-Modal Triggers -->
                 <li class="tab"><a class="waves-effect waves-light" href="#show-gallery-here">Gallery</a></li>
+                <li class="tab non-modal"><a class="waves-effect waves-light" hef="" id="resume">Resume</a></li>
+                <li class="tab non-modal"><a class="waves-effect waves-light" hef="" id="contact">Contact</a></li>
 
                 <!-- Modal Triggers -->                
-                <li class="tab"><a class="waves-effect waves-light modal-trigger" href="#modal2">Resume</a></li>
-                <li class="tab"><a class="waves-effect waves-light modal-trigger" href="#modal1">Contact</a></li>
+                <li class="tab modal-show"><a class="waves-effect waves-light modal-trigger" href="#modal2">Resume</a></li>
+                <li class="tab modal-show"><a class="waves-effect waves-light modal-trigger" href="#modal1">Contact</a></li>
+
             </ul>
         </div>
 
         <ul class="sidenav" id="mobile-demo">
             <nav class="nav-extended" id="navbar-1">
                 <div class="nav-wrapper">
-                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img src="./assets/images/icons/hamburger.png" class="hamburger"></a>
+                    <a href="./index.html" class="brand-logo">Home</a>
                 </div>
             </nav>
+            <!-- <a target="_blank" href="/icons/set/bowling">Bowling icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
                 <li><a href="./games.html">GAMES</a></li>
                 <li><a href="./api.html">API'S</a></li>
                 <li><a href="./databases.html">DATABASES</a></li>
@@ -99,11 +108,88 @@
                     </div>
                 </div>
             </div>
+
+            <div class="container" id="container-contact">
+                <!-- <a target="_blank" href="/icons/set/contacts">Contacts icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+                <a><img src="./assets/images/icons/new-contact.png" class="icon"></a>
+                <h5>Contact Me</h5>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="first_name" type="text" class="validate">
+                                    <label for="first_name">First Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Last Name</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="telephone" type="text" class="validate">
+                                    <label for="telephone">Telephone</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="email" type="email" class="validate">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="message" type="text" class="validate">
+                                    <label for="message">Please leave a message</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a class="waves-effect waves-light btn" id="submit">Submit</a>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+
+            <div class="container" id="container-resume">
+                <!-- <a target="_blank" href="/icons/set/contacts">Contacts icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+                <a><img src="./assets/images/icons/resume.png" class="icon"></a>
+                <h5>Resume</h5>
+
+                <div class="row">
+                    <div class="col s12 m4">
+                    <img src="./assets/images/resume/CaitlanJeffrey_Resume.png" id="resume">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card(1) -->
+        <div class="row cards">
+            <div class="col s12 m6" id="show-gallery-here">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./assets/images/profile-picture.jpg">
+                    </div>
+                    <div class="card-content">
+                        <h6 class="card-title grey-text text-darken-4">Me</h6>
+                                
+                        <!-- <a target="_blank" href="/icons/set/plus">Plus icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+                        <img src="./assets/images/icons/plus.png" class="card-icon activator">
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Me, Caitlan<i class="material-icons right">X</i></span>
+                        <p class="content">I don't talk about myself very much. So I don't know what to say.</p>
+                        <p class="content">I like tacos.</p>
+                        <p class="content">I love lamp.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Cards(2) -->
-        <div class="row">
-            <div class="col s12 m6" id="show-gallery-here">
+        <div class="row cards">
+            <div class="col s12 m6">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="./assets/images/gallery/out-west.jpeg">
@@ -137,7 +223,7 @@
         </div>
 
         <!-- Cards(3) -->
-        <div class="row">
+        <div class="row cards">
             <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
@@ -184,13 +270,6 @@
                         <p class="content">But to my daughter it's the best activity for a windy day.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Interests -->
-        <div class="container" id="container">
-            <div class="row">
-
             </div>
         </div>
 
