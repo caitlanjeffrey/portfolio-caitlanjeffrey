@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Project CSS -->
-    <link rel="stylesheet" href="./assets/css/small-screen.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="./assets/css/small-screen.css">
+    <link rel="stylesheet" media="screen and (min-width: 601px" href="./assets/css/medium-screen.css">
+    <link rel="stylesheet" media="screen and (min-width: 1000px)" href="./assets/css/large-screen.css">
 
     <!-- Icons recieved from: (https://icons8.com/icons)-->
 
@@ -181,8 +183,8 @@
 
         <!-- train ads-->
         <div class="row">
-            <div class="col s12 m6" id="show-gallery-here">
-                <div class="card">
+            <div class="col s12 m6">
+                <div class="card train-ad">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="./assets/images/database/green.jpg">
                     </div>
@@ -203,7 +205,7 @@
             </div>
     
             <div class="col s12 m6">
-                <div class="card">
+                <div class="card train-ad">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="./assets/images/database/okc-station.jpg">
                     </div>
@@ -216,7 +218,7 @@
 
         <div class="container" id="train-ads">
             <div class="col s12 m6">
-                <div class="card">
+                <div class="card" id="ad">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="./assets/images/database/CCJPA_Route_Map_June_2018.jpeg">
                     </div>
@@ -227,9 +229,11 @@
                 </div>
             </div>
 
+        <br>
+
             <div class="row" id="quote">
-                <div class="col s12 m4">
-                    <p>“When I was young 
+                <div class="col s12 m12">
+                    <p class="content">“When I was young 
                         I wanted to be just like him.
                         One of the charm, of a bright orange smile
                         and muscular laughter.
@@ -238,15 +242,15 @@
                         on cold blue nights
                         in empty boxcars.
                     </p>        
-                    <p>Riding a freight train's
+                    <p class="content">Riding a freight train's
                         solitary wail
                         away from Nebraska
                         Depression, accompanying dreams
                         withered farms.
                         Nothing left but the
                         leaves of possibilities.”
+                        <cite title="Source Title">Larsen Bowker</cite>
                     </p>
-                    <cite title="Source Title">Larsen Bowker</cite>
                 </div>
             </div>
         </div>

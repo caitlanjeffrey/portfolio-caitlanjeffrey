@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 function windowResize() {
     console.log('hi')
-    if ($(document).width() < 600) {
+    if ($(document).width() < 1000) {
         $('.modal-show').hide()
         $('.modal-trigger').hide()
     }
