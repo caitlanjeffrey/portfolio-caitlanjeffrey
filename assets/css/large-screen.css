@@ -106,14 +106,17 @@ body {
         }
 
         #resume {
-            width: inherit;
+            width: 100%;
+        }
+
+        .tabs {
+            width: 100%;
         }
 
         #buy-tickets, #departures {
             color: #ffffff;
             text-align: center;
             height: auto;
-            width: 100%;
             background-color: #0c40e6;
         }
 
@@ -218,13 +221,18 @@ body {
 
         #submit {
             background-color: #9bb4ae;
-            margin-left: 10px;
+            margin-right: 10px;
         }
 
         #buy-tickets-submit{
             background-color: #0c40e6;
             margin-left: 10px;
         }
+
+/* Modal */
+    .modal {
+        width: 75%;
+    }
 
 /* Footer */
     .social-media {
