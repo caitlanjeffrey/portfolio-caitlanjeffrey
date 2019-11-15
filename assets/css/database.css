@@ -109,7 +109,6 @@ body {
         }
     
     /* Input Form */
-
         /* label color */
         .input-field label {
             color: #0c40e6;
@@ -152,7 +151,6 @@ body {
     color: #ffffff;
     text-align: center;
     background-color: #0c40e6;
-
 }
 
 #buy-tickets:hover, #departures:hover {
@@ -166,7 +164,7 @@ body {
 }
 
 /* Modal */
-    #modal2 {x
+    #modal2 {
         height: 730px;
         max-height: 90%;
     }

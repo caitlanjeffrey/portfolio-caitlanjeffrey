@@ -38,6 +38,10 @@ body {
             margin: 0 0 0 15px;
         }
 
+        .train-nav {
+            width: 100%;
+        }
+
 /* Main Section */
     main {
         background-color: #e8e8e8;
@@ -55,10 +59,26 @@ body {
     }
 
     #welcome {
-        padding: 500px 20px 20px 20px;
+        padding: 375px 10px 10px 10px;
         margin: 0;
-        font-size: 80px;
-        color: black;
+        font-size: 70px;
+        color: #e8e8e8;
+    }
+
+    .database-image {
+        background-image: url(../images/database-short.jpeg);
+        background-size: cover;
+        height: 600px;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .train-image {
+        background-image: url(../images/database/amtrak-train-ventura-california.jpg);
+        background-size: cover;
+        height: 400px;
+        padding: 0px;
+        margin: 0;
     }
 
     /* Content & Containers */
@@ -67,6 +87,17 @@ body {
             width: 100%;
             background-color: #ffffff;
         }
+
+        #database, #train-game, #train-ads {
+            height: auto;
+            width: 100%;
+            background-color: #ffffff;
+        }
+        
+        #book-tickets {
+            padding: 0 0 10px 0;
+        }
+
 
         .content, h5 {
             color: #6d6373;
@@ -87,6 +118,20 @@ body {
             width: inherit;
         }
 
+        #buy-tickets, #departures {
+            color: #ffffff;
+            text-align: center;
+            height: auto;
+            width: 100%;
+            background-color: #0c40e6;
+        }
+
+        #submit {
+            color: #ffffff;
+            background-color: #0c40e6;
+            margin: 0 0 10px 0px;
+        }
+
     /* Card Views */
         .card {
             margin: 20px 0 0 0;
@@ -105,36 +150,83 @@ body {
             margin: 0;
         }
 
+        cite title {
+            margin: 5px;
+        }
+
     /* Input Form */
-        /* label color */
-        .input-field label {
-            color: #b8847d;
-        }
-        /* label focus color */
-        .input-field input[type=text]:focus + label {
-            color: #b8847d;
-        }
-        /* label underline focus color */
-        .input-field input[type=text]:focus {
-            border-bottom: 1px solid #000;
-            box-shadow: 0 1px 0 0 #000;
-            color: #b8847d;
-        }
-        /* valid color */
-        .input-field input[type=text].valid {
-            border-bottom: 1px solid #9bb4ae;
-            box-shadow: 0 1px 0 0 #9bb4ae;
-            color: #9bb4ae;
-        }
-        /* invalid color */
-        .input-field input[type=text].invalid {
-            border-bottom: 1px solid red;
-            box-shadow: 0 1px 0 0 red;
-            color: red;
-        }
+        /* Contact Form */
+            /* label color */
+            .input-field label {
+                color: #b8847d;
+            }
+            /* label underline focus color */
+            .input-field input[type=text]:focus {
+                border-bottom: 1px solid #000;
+                box-shadow: 0 1px 0 0 #000;
+                color: #b8847d;
+            }
+            /* valid color */
+            .input-field input[type=text].valid {
+                border-bottom: 1px solid#a094a6;
+                box-shadow: 0 1px 0 0 #a094a6;
+                color: #a094a6;
+            }
+            /* invalid color */
+            .input-field input[type=text].invalid {
+                border-bottom: 1px solid red;
+                box-shadow: 0 1px 0 0 red;
+                color: red;
+            }
+        
+        /* Train-Game Buy Tickets */
+            /* label color */
+            .input-field label[for=train-name] {
+                color: #0c40e6;
+            }
+            .input-field label[for=destination] {
+                color: #0c40e6;
+            }
+            .input-field label[for=first-train] {
+                color: #0c40e6;
+            }
+            .input-field label[for=frequency] {
+                color: #0c40e6;
+            }
+
+            /* label focus color */
+            .input-field input[type=text]:focus + label  {
+                color: #6d6373;
+            }
+
+            /* label underline focus color */
+            .input-field input[type=text]:focus {
+                border-bottom: 1px solid #000;
+                box-shadow: 0 1px 0 0 #000;
+                color: #6d6373;
+            }
+
+            /* valid color */
+            .input-field input[type=text].valid {
+                border-bottom: 1px solid #6d6373;
+                box-shadow: 0 1px 0 0 #6d6373;
+                color: #6d6373;
+            }
+                
+            /* invalid color */
+            .input-field input[type=text].invalid {
+                border-bottom: 1px solid red;
+                box-shadow: 0 1px 0 0 red;
+                color: red;
+            }
 
         #submit {
             background-color: #9bb4ae;
+            margin-left: 10px;
+        }
+
+        #buy-tickets-submit{
+            background-color: #0c40e6;
             margin-left: 10px;
         }
 

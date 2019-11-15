@@ -1,8 +1,31 @@
 
 
 $(document).ready(function(){
-    if ($(window).width() < 600) {
+
+    // supporting small screen devices with separate UI and features
+    window.addEventListener("resize", windowResize)
+    windowResize();
+
+    // mobile responsive sidenav
+    $('.sidenav').sidenav();
+
+    // modal trigger
+    $('.modal').modal()
+    $('.non-modal').show()
+
+    $(".welcome-image").scroll(function(){
+        $("#welcome").animate({down: '250px'});
+    });
+
+    $("#container-resume").hide()
+    $("#container-contact").hide()
+})
+
+function windowResize() {
+    console.log('hi')
+    if ($(document).width() < 600) {
         $('.modal-show').hide()
+        $('.modal-trigger').hide()
 
         $("#resume").on("click", function(){
             $("#container-resume").show()
@@ -19,49 +42,17 @@ $(document).ready(function(){
         })
         
         // needs fixing
-        $("#gallery").on("click", function(){
+        $(".gallery").on("click", function(){
             $("#container-interests").show()
+            $(".cards").show()
             $("#container-contact").hide()
             $("#container-resume").hide()
         })
-    }
-
-    else {
+    } else {
         $('.modal-show').show()
         $('.non-modal').hide()
     }
-
-    // mobile responsive sidenav
-    $('.sidenav').sidenav();
-
-    // modal trigger
-    $('.modal').modal()
-    
-    $("#container-resume").hide()
-    $("#container-contact").hide()
-});
-
-// $("#resume").on("click", function(){
-//     $("#container-resume").show()
-//     $("#container-interests").hide()
-//     $("#container-contact").hide()
-//     $(".cards").hide()
-// })
-
-// $("#contact").on("click", function(){
-//     $("#container-contact").show()
-//     $("#container-interests").hide()
-//     $("#container-resume").hide()
-//     $(".cards").hide()
-// })
-
-// needs fixing
-// $("#gallery").on("click", function(){
-//     $("#container-interests").show()
-//     $("#container-contact").hide()
-//     $("#container-resume").hide()
-// })
-
+}
 
 // FIREBASE CONFIGURATION
     var firebaseConfig = {
@@ -112,5 +103,3 @@ $(document).ready(function(){
     }), function(errorObject) {
         console.log("Errors handled: " + errorObject.code);
     }
-
-
