@@ -12,6 +12,9 @@ $(document).ready(function(){
     // modal trigger
     $('.modal').modal()
     
+    // materialboxed trigger
+    $('.materialboxed').materialbox();
+    
     $("#container-resume").hide()
     $("#container-contact").hide()
 })

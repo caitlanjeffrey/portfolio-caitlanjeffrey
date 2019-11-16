@@ -10,7 +10,7 @@ $(document).ready(function(){
     $('.modal').modal()
 
     // hide/show
-    $("#train").hide()
+    $("#train-main").hide()
 });
 
 function windowResize() {
@@ -26,7 +26,7 @@ function windowResize() {
 }
 
 $("#train-schedule-show").on("click", function(){
-    $("#train").show()
+    $("#train-main").show()
     $("#main").hide()
     $("table").hide()
     
