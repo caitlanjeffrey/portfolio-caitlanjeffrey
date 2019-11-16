@@ -11,12 +11,7 @@ $(document).ready(function(){
 
     // modal trigger
     $('.modal').modal()
-    $('.non-modal').show()
-
-    $(".welcome-image").scroll(function(){
-        $("#welcome").animate({down: '250px'});
-    });
-
+    
     $("#container-resume").hide()
     $("#container-contact").hide()
 })
@@ -24,8 +19,8 @@ $(document).ready(function(){
 function windowResize() {
     console.log('hi')
     if ($(document).width() < 1000) {
+        $('.non-modal').show()
         $('.modal-show').hide()
-        $('.modal-trigger').hide()
 
         $("#resume").on("click", function(){
             $("#container-resume").show()
@@ -41,7 +36,6 @@ function windowResize() {
             $(".cards").hide()
         })
         
-        // needs fixing
         $(".gallery").on("click", function(){
             $("#container-interests").show()
             $(".cards").show()

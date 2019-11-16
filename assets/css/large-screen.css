@@ -50,7 +50,7 @@ body {
     }
 
     #welcome {
-        padding: 550px 10px 10px 10px;
+        padding: 550px 10px 10px 50px;
         margin: 0;
         font-size: 70px;
         color: #e8e8e8;
@@ -59,7 +59,7 @@ body {
     .database-image {
         background-image: url(../images/database-short.jpeg);
         background-size: cover;
-        height: 600px;
+        height: 700px;
         padding: 0px;
         margin: 0;
     }
@@ -67,7 +67,15 @@ body {
     .train-image {
         background-image: url(../images/database/amtrak-train-ventura-california.jpg);
         background-size: cover;
-        height: 600px;
+        height: 700px;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .api-image {
+        background-image: url(../images/api-short.jpeg);
+        background-size: cover;
+        height: 700px;
         padding: 0px;
         margin: 0;
     }
@@ -79,7 +87,7 @@ body {
             background-color: #ffffff;
         }
 
-        #database, #train-game, #train-ads {
+        #database, #train-game, #train-ads, #api {
             height: auto;
             width: 90%;
             background-color: #ffffff;
@@ -109,15 +117,12 @@ body {
             width: 100%;
         }
 
-        .tabs {
-            width: 100%;
-        }
-
         #buy-tickets, #departures {
             color: #ffffff;
             text-align: center;
             height: auto;
             background-color: #0c40e6;
+            width: 200px;
         }
 
         #submit {

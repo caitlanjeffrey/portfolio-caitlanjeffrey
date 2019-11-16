@@ -59,7 +59,7 @@ body {
     }
 
     #welcome {
-        padding: 375px 10px 10px 10px;
+        padding: 400px 10px 10px 10px;
         margin: 0;
         font-size: 70px;
         color: #e8e8e8;
@@ -74,9 +74,17 @@ body {
     }
 
     .train-image {
-        background-image: url(../images/database/amtrak-train-ventura-california.jpg);
+        background-image: url(../images/database/short.jpeg);
         background-size: cover;
-        height: 400px;
+        height: 600px;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .api-image {
+        background-image: url(../images/api-short.jpeg);
+        background-size: cover;
+        height: 600px;
         padding: 0px;
         margin: 0;
     }
@@ -88,7 +96,14 @@ body {
             background-color: #ffffff;
         }
 
-        #database, #train-game, #train-ads {
+        #database, #train-game, #api, #park {
+            height: auto;
+            width: 100%;
+            background-color: #ffffff;
+            margin-top: 75px;
+        }
+        
+        #train-ads {
             height: auto;
             width: 100%;
             background-color: #ffffff;
@@ -97,7 +112,6 @@ body {
         #book-tickets {
             padding: 0 0 10px 0;
         }
-
 
         .content, h5 {
             color: #6d6373;
@@ -137,6 +151,10 @@ body {
             margin: 20px 0 0 0;
         }
 
+        .train-ad {
+            margin: 45px 0 0 0;
+        }
+
         .card-icon {
             position: absolute;
             bottom: 0;
@@ -160,18 +178,21 @@ body {
             .input-field label {
                 color: #b8847d;
             }
+
             /* label underline focus color */
             .input-field input[type=text]:focus {
                 border-bottom: 1px solid #000;
                 box-shadow: 0 1px 0 0 #000;
                 color: #b8847d;
             }
+
             /* valid color */
             .input-field input[type=text].valid {
                 border-bottom: 1px solid#a094a6;
                 box-shadow: 0 1px 0 0 #a094a6;
                 color: #a094a6;
             }
+
             /* invalid color */
             .input-field input[type=text].invalid {
                 border-bottom: 1px solid red;
@@ -212,7 +233,7 @@ body {
                 box-shadow: 0 1px 0 0 #6d6373;
                 color: #6d6373;
             }
-                
+
             /* invalid color */
             .input-field input[type=text].invalid {
                 border-bottom: 1px solid red;
@@ -229,6 +250,10 @@ body {
             background-color: #0c40e6;
             margin-left: 10px;
         }
+/* Table */
+    #departures-table{
+        overflow-x: auto;
+    }
 
 /* Footer */
     .social-media {

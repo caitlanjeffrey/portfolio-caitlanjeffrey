@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
-    <!-- Compiled and minified CSS -->
+    <!-- Materialze -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Project CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="./assets/css/small-screen.css">
+    <link rel="stylesheet" media="screen and (min-width: 601px" href="./assets/css/medium-screen.css">
+    <link rel="stylesheet" media="screen and (min-width: 1000px)" href="./assets/css/large-screen.css">
 
     <!-- Icons recieved from: (https://icons8.com/icons)-->
 
@@ -40,10 +41,7 @@
         <!-- Tabs -->
         <div class="nav-content">
             <ul class="tabs tabs-transparent">
-                <li class="tab"><a class="waves-effect waves-light" href="#show-gallery-here">Gallery</a></li>
-
-                <!-- Modal Trigger -->
-                <li class="tab"><a class="waves-effect waves-light modal-trigger" href="#modal1">Contact</a></li>
+                <li class="tab"><a class="waves-effect waves-light" id="national-parks">National Park Geeks</a></li>
             </ul>
         </div>
 
@@ -60,43 +58,28 @@
         </ul>
     </header>
 
-    <main>
-        <div class="welcome-image">
+    <main id="main">
+        <div class="api-image">
             <h3 id="welcome"></h3>
 
-            <div class="container" id="container-interests">
+            <div class="container" id="api">
                 <div class="row">
-                    <div class="col s12 m4 section">
+                    <div class="col s12 m12 section">
                         <div class="section-title">
-                            <!-- <a target="_blank" href="/icons/set/person-female">Person Female icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
-                            <a><img src="./assets/images/icons/female-icon.png" class="icon"></a>
-                            <h5>About Me</h5>
+                            <!-- <a target="_blank" href="/icons/set/application-shield">Application Shield icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+                            <a><img src="./assets/images/icons/application.png" class="icon"></a>
+                            <h5>API's</h5>
                         </div>
                         <div class="section-content">
-                            <p class="content">I'm a California native, that has spent the last 10-years of my life living in Oklahoma. I attended Oklahoma State University in Stillwater, majoring in Animal Science - Agricultural Education Double Major. The pursuing my Animal Science degree, I also spent time as a student teacher in southwest Oklahoma. I graduated from Oklahoma State University in 2012, completing my majors.</p>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4 section">
-                        <div class="section-title">
-                            <!-- <a target="_blank" href="/icons/set/multiple-devices">Multiple Devices icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
-                            <a><img src="./assets/images/icons/career.png" class="icon"></a>
-                            <h5>Career</h5>
-                        </div>
-                        <div class="section-content">
-                            <p class="content">After graduation, I moved around the state and settled back into the Stillwater area. I was hired at Proagrica, an agricultural solutions company, where I spent the last 3-years as the Lead Business Analyst in their precision agriculture and agronomic solutions department.</p>
-                            <p class="content">One of the products I helped manage was an iOS Mobile product. The complete product line includes a web and mobile application for iOS and Android. My focus was on designing new and existing features, working closely with developers, researching new agriculture technologies, writing requirements and managing the day to day progress of the mobile applications.</p>
-                        </div>
-                    </div>
-                    <div class="col s12 m4 section">
-                        <div class="section-title">
-                            <!-- <a target="_blank" href="/icons/set/home">Home icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
-                            <a><img src="./assets/images/icons/home.png" class="icon"></a>
-                            <h5>Home</h5>
-                        </div>
-                        <div class="section-content">
-                            <p class="content">When I wasn’t at work, I spent my time working on my farm and garden. On the farm I raised: dairy goats, chickens, ducks, horses and dogs! In the garden, I cared for: fruit trees, asparagus, brussel sprouts, bouquet flowers and an extensive native plant (monarch butterfly safe) garden.</p>
-                            <p class="content">Today, I live in Davis, California with my daughter and dogs.</p>            
+                            <p class="content">
+                                A database is more than a structured set of 
+                                data held in a nameless computer. It's the instant
+                                guarantee that the data we save and use online, 
+                                the data we intrust to websites and companies, 
+                                is available upon our request.</p>
+                            <p class="content">
+                                As I continue my learning, I have tasked myself with implementing and experimenting with different database services. My first set of projects use <a href="https://firebase.google.com/">Firebase</a>.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -108,125 +91,182 @@
             <div class="col s12 m6" id="show-gallery-here">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="./assets/images/gallery/out-west.jpeg">
+                        <img class="activator" src="./assets/images/database/amtrak-train-ventura-california.jpg">
                     </div>
                     <div class="card-content">
-                        <h6 class="card-title grey-text text-darken-4">Killers Of The Flower Moon</h6>
-                        <!-- <a target="_blank" href="/icons/set/plus">Plus icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
-                        <img src="./assets/images/icons/plus.png" class="card-icon activator">
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Killers Of The Flower Moon<i class="material-icons right">X</i></span>
-                        <p class="content">In the 1920s, the richest people per capita in the world were members of the Osage Nation in Oklahoma. After oil was discovered beneath their land, the Osage rode in chauffeured automobiles, built mansions, and sent their children to study in Europe.</p>
-                        <p class="content">Then, one by one, the Osage began to be killed off. The family of an Osage woman, Mollie Burkhart, became a prime target. One of her relatives was shot. Another was poisoned. And it was just the beginning, as more and more Osage were dying under mysterious circumstances, and many of those who dared to investigate the killings were themselves murdered.</p>
-                        <p class="content">As the death toll rose, the newly created FBI took up the case, and the young director, J. Edgar Hoover, turned to a former Texas Ranger named Tom White to try to unravel the mystery. White put together an undercover team, including a Native American agent who infiltrated the region, and together with the Osage began to expose one of the most chilling conspiracies in American history.</p>
-                        <p class="content">Penguin Random House <span>Author David Grann</span></p>
+                        <h6 class="card-title grey-text text-darken-4">Project: Train Schedule</h6>
+                        <div class="card-action">
+                                <a href="https://caitlanjeffrey.github.io/train-activity/">Github: Train-Activity</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col s12 m6">
+            <div class="col s12 m6" id="show-gallery-here">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="./assets/images/gallery/bull.jpeg">
+                        <img class="activator" src="./assets/images/gallery/out-west.jpeg">
                     </div>
                     <div class="card-content">
-                        <h6 class="card-title grey-text text-darken-4">No Bull</h6>
+                        <h6 class="card-title grey-text text-darken-4">Project: National Park Geeks</h6>
+                        <div class="card-action">
+                                <a href="https://caitlanjeffrey.github.io/Project1/">Github: Project-1</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </main>
 
-        <!-- three cards m4 -->
-        <div class="row">
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="./assets/images/gallery/out-west.jpeg">
-                    </div>
-                    <div class="card-content">
-                        <h6 class="card-title grey-text text-darken-4">Killers Of The Flower Moon</h6>
-                    </div>
+    <main id="national-parks">
+        <div class="national-park-image">
+            <h3 id="welcome"></h3>
+
+            <div class="container" id="park">
+                <div class="row train-nav">
+                    <ul class="tabs tabs-transparent">
+
+                        <!-- Non-Modal Triggers -->
+                        <li class="tab non-modal"><a class="waves-effect waves-light" id="buy-tickets">Tickets</a></li>
+                        <li class="tab non-modal"><a class="waves-effect waves-light" id="departures">Schedule</a></li>
+                        
+                        <!-- Modal Triggers-->
+                        <li class="tab modal-show"><a class="tab waves-effect waves-light modal-trigger" href="#modal1" id="departures">Schedule</a></li>
+                    </ul>
                 </div>
-            </div>
-    
-            <div class="col s12 m4" id="show-gallery-here">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="./assets/images/gallery/out-west.jpeg">
-                    </div>
-                    <div class="card-content">
-                        <h6 class="card-title grey-text text-darken-4">Killers Of The Flower Moon</h6>
-                        <!-- <a target="_blank" href="/icons/set/plus">Plus icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
-                        <img src="./assets/images/icons/plus.png" class="card-icon activator">
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Killers Of The Flower Moon<i class="material-icons right">X</i></span>
-                        <p class="content">In the 1920s, the richest people per capita in the world were members of the Osage Nation in Oklahoma. After oil was discovered beneath their land, the Osage rode in chauffeured automobiles, built mansions, and sent their children to study in Europe.</p>
-                        <p class="content">Then, one by one, the Osage began to be killed off. The family of an Osage woman, Mollie Burkhart, became a prime target. One of her relatives was shot. Another was poisoned. And it was just the beginning, as more and more Osage were dying under mysterious circumstances, and many of those who dared to investigate the killings were themselves murdered.</p>
-                        <p class="content">As the death toll rose, the newly created FBI took up the case, and the young director, J. Edgar Hoover, turned to a former Texas Ranger named Tom White to try to unravel the mystery. White put together an undercover team, including a Native American agent who infiltrated the region, and together with the Osage began to expose one of the most chilling conspiracies in American history.</p>
-                        <p class="content">Penguin Random House <span>Author David Grann</span></p>
-                    </div>
-                </div>
-            </div>
-                
-            <div class="col s12 m4" id="show-gallery-here">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="./assets/images/gallery/out-west.jpeg">
-                    </div>
-                    <div class="card-content">
-                        <h6 class="card-title grey-text text-darken-4">Killers Of The Flower Moon</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
+            
+                <!-- <br> -->
 
-        <div class="container" id="container">
-            <div class="row">
-
-            </div>
-        </div>
-
-        <!-- Modals-->
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h5>Contact Me</h5>
-                <div class="row">
+                <div class="row" id="book-tickets">
                     <form class="col s12">
                         <div class="row">
                             <div class="input-field col s6">
-                                <input id="first_name" type="text" class="validate">
-                                <label for="first_name">First Name</label>
+                                <input placeholder="Enter Train Name" id="train-name" type="text" class="validate">
+                                <label for="train-name">Train (Company)</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Last Name</label>
+                                <input placeholder="Sacramento, CA" id="destination" type="text" class="validate">
+                                <label for="destination">Destination (City, State)</label>
                             </div>
                         </div>
-    
+        
                         <div class="row">
                             <div class="input-field col s6">
-                                <input id="telephone" type="text" class="validate">
-                                <label for="telephone">Telephone</label>
+                                <input placeholder="Time First Train Leaves Station" id="first-train" type="text" class="validate">
+                                <label for="first-train">First Train (Military Time)</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Email</label>
+                                <input placeholder="15 mins" id="frequency" type="text" class="validate">
+                                <label for="frequency">Frequency of Arrivals (Mins)</label>
                             </div>
                         </div>
-    
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="message" type="text" class="validate">
-                                <label for="message">Please leave a message</label>
-                            </div>
-                        </div>
+                        <a class="waves-effect waves-light btn" id="buy-tickets-submit">Buy Tickets</a>
                     </form>
                 </div>
+
+                <div class="row" id="departures-table">
+                    <table class="table col s12">
+                        <thead>
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Desination</th>
+                                <th scope="col">Frequency (Mins)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Till Arrival</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="example">Example: Amtrak</td>
+                                <td class="example">Oakland, CA</td>
+                                <td class="example">Every 65 mins</td>
+                                <td class="example">8:05am</td>
+                                <td class="exmaple">16 mins</td>
+                            </tr> 
+                        </tbody>
+                    </table>
+                </div>
             </div>
+        </div>
+
+        <!-- train ads-->
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card train-ad">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./assets/images/database/green.jpg">
+                    </div>
+                    <div class="card-content">
+                        <h6 class="card-title grey-text text-darken-4">Green Rails Ahead!</h6>
+                        
+                        <!-- <a target="_blank" href="/icons/set/plus">Plus icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+                        <img src="./assets/images/icons/plus.png" class="card-icon activator">
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Killers Of The Flower Moon<i class="material-icons right">X</i></span>
+                        <p class="content">In the 1920s, the richest people per capita in the world were members of the Osage Nation in Oklahoma. After oil was discovered beneath their land, the Osage rode in chauffeured automobiles, built mansions, and sent their children to study in Europe.</p>
+                        <p class="content">Then, one by one, the Osage began to be killed off. The family of an Osage woman, Mollie Burkhart, became a prime target. One of her relatives was shot. Another was poisoned. And it was just the beginning, as more and more Osage were dying under mysterious circumstances, and many of those who dared to investigate the killings were themselves murdered.</p>
+                        <p class="content">As the death toll rose, the newly created FBI took up the case, and the young director, J. Edgar Hoover, turned to a former Texas Ranger named Tom White to try to unravel the mystery. White put together an undercover team, including a Native American agent who infiltrated the region, and together with the Osage began to expose one of the most chilling conspiracies in American history.</p>
+                        <p class="content">Penguin Random House <span>Author David Grann</span></p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col s12 m6">
+                <div class="card train-ad">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./assets/images/database/okc-station.jpg">
+                    </div>
+                    <div class="card-content">
+                        <h6 class="card-title grey-text text-darken-4">Oklahoma City, OK</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="train-ads">
+            <div class="col s12 m6">
+                <div class="card" id="ad">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./assets/images/database/CCJPA_Route_Map_June_2018.jpeg">
+                    </div>
+                    <div class="card-content">
+                        <h6 class="card-title grey-text text-darken-4">Student's Save 20%</h6>
+                        <p class="content">Now until the end of the year, student's save 20% off Capitol Corridor Tickets!</p>
+                    </div>
+                </div>
+            </div>
+
+        <br>
+
+            <div class="row" id="quote">
+                <div class="col s12 m12">
+                    <p class="content">“When I was young 
+                        I wanted to be just like him.
+                        One of the charm, of a bright orange smile
+                        and muscular laughter.
+                        Bold brown eyes flashing fearless
+                        when he sat not alone
+                        on cold blue nights
+                        in empty boxcars.
+                    </p>        
+                    <p class="content">Riding a freight train's
+                        solitary wail
+                        away from Nebraska
+                        Depression, accompanying dreams
+                        withered farms.
+                        Nothing left but the
+                        leaves of possibilities.”
+                        <cite title="Source Title">Larsen Bowker</cite>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal modal-fixed-footer">
+            <h4>Students Save 20% on Select California Routes!</h4>
             <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">X</a>
+                <a href="#modal1" class="modal-close waves-effect waves-light btn btn-flat">Close</a>
             </div>
         </div>
     </main>
@@ -263,21 +303,19 @@
         </div>
     </footer>
 
-    <!-- Compiled and slim minified jQuery CDN -->
+    <!-- Firebase -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     
-    <!-- Materialized compiled and minified JavaScript -->
+    <!-- Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
 
     <!-- Project JavaScript-->
     <script src="./assets/javascript/index.js"></script>
 
-    <!-- jQuery card flip -->
-    <!-- https://nnattawat.github.io/flip/ -->
-    <!-- <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"> -->
-    
 </body>
 </html>

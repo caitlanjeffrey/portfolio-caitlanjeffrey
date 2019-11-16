@@ -76,7 +76,15 @@ body {
     .train-image {
         background-image: url(../images/database/amtrak-train-ventura-california.jpg);
         background-size: cover;
-        height: 500px;
+        height: 600px;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .api-image {
+        background-image: url(../images/api-short.jpeg);
+        background-size: cover;
+        height: 600px;
         padding: 0px;
         margin: 0;
     }
@@ -88,16 +96,22 @@ body {
             background-color: #ffffff;
         }
 
-        #database, #train-game, #train-ads {
+        #database, #train-game, #api {
+            height: auto;
+            width: 100%;
+            background-color: #ffffff;
+            margin-top: 75px;
+        }
+        
+        #train-ads {
             height: auto;
             width: 100%;
             background-color: #ffffff;
         }
-        
+
         #book-tickets {
             padding: 0 0 10px 0;
         }
-
 
         .content, h5 {
             color: #6d6373;
@@ -234,6 +248,10 @@ body {
             background-color: #0c40e6;
             margin-left: 10px;
         }
+/* Table */
+    #departures-table{
+        overflow-x: auto;
+    }
 
 /* Footer */
     .social-media {

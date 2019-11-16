@@ -17,7 +17,11 @@ function windowResize() {
     console.log('hi')
     if ($(document).width() < 1000) {
         $('.modal-show').hide()
-        $('.modal-trigger').hide()
+        $('.non-modal').show()
+
+    } else {
+        $('.modal-show').show()
+        $('.non-modal').hide()
     }
 }
 
@@ -30,14 +34,16 @@ $("#train-schedule-show").on("click", function(){
         $("#book-tickets").hide()
         $(".card").hide()
         $("#quote").hide()
+        $("#train-ads").hide()
         $("table").show()
-        // $(".page-footer").show()
+
         console.log("hi")
     })
 
     $("#buy-tickets").on("click", function(){
         $("#book-tickets").show()
         $(".card").show()
+        $("#train-ads").show()
         $("table").hide()
         console.log("hello")
     })
