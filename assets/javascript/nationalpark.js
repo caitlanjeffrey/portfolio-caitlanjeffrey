@@ -179,6 +179,10 @@ function search(searchNationalPark){
             // <a target="_blank" href="/icons/set/like--v3">Heart icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a>
             var heartIconRed = '<img src="./assets/images/icons/heart-red.png" class="icon" id="heart-red">'
 
+            // weather icon
+            // <a target="_blank" href="/icons/set/windy-weather">Windy Weather icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a>
+            var weatherIcon = '<img src="./assets/images/icons/cloudy.png" class="icon" id="weather-icon">'
+
             cardTitle.text(parkName)
             cardContent.text(parkContent)
             cardDirections.text(parkDirections)
@@ -189,6 +193,7 @@ function search(searchNationalPark){
             card.append(cardDirections)
             card.append(heartIconGrey)
             card.append(heartIconRed)
+            card.append(weatherIcon)
             cardColumn.append(card)
             $("#new-park-cards").prepend(cardColumn)
 
