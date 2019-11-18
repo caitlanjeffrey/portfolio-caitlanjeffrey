@@ -30,7 +30,6 @@
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img src="./assets/images/icons/hamburger.png" class="hamburger"></a>
                         <ul id="nav-mobile" class="right hide-on-med-and-down">
                             <li><a href="./index.html" id="nav-first">HOME</a></li>
-                            <li><a href="./games.html" id="nav-first">GAMES</a></li>
                             <li><a href="./api.html" id="nav-second">API'S</a></li>
                             <li><a href="./databases.html" id="nav-thrid">DATABASES</a></li>
                     </ul>
@@ -41,7 +40,7 @@
         <!-- Tabs -->
         <div class="nav-content">
             <ul class="tabs tabs-transparent">
-                <li class="tab"><a class="waves-effect waves-light" id="national-parks">National Park Geeks</a></li>
+                <li class="tab"><a class="waves-effect waves-light" id="npgeeks-tab">National Park Geeks</a></li>
             </ul>
         </div>
 
@@ -52,7 +51,6 @@
                 </div>
             </nav>
                 <li><a href="./index.html" id="nav-first">HOME</a></li>
-                <li><a href="./games.html">GAMES</a></li>
                 <li><a href="./api.html">API'S</a></li>
                 <li><a href="./databases.html">DATABASES</a></li>
         </ul>
@@ -91,7 +89,7 @@
             <div class="col s12 m6">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="./assets/images/gallery/out-west.jpeg">
+                        <img class="activator" src="./assets/images/api/bryce-canyon.jpg">
                     </div>
                     <div class="card-content">
                         <h6 class="card-title grey-text text-darken-4">Project: National Park Geeks</h6>
@@ -104,40 +102,82 @@
         </div>
     </main>
 
-    <main id="national-park-main">
+    <main id="npgeeks-main">
         <div class="national-park-image">
-            <h3 id="welcome"></h3>
-
+            <h3 id="park-geeks">Welcome Park Geeks!</h3>
             <div class="container" id="park">
-                <div class="row train-nav">
+                <div class="row park-nav">
                     <ul class="tabs tabs-transparent">
 
                         <!-- Non-Modal Triggers -->
-                        <li class="tab non-modal"><a class="waves-effect waves-light" id="buy-tickets">Tickets</a></li>
-                        <li class="tab non-modal"><a class="waves-effect waves-light" id="departures">Schedule</a></li>
-                        
-                        <!-- Modal Triggers-->
-                        <li class="tab modal-show"><a class="tab waves-effect waves-light modal-trigger" href="#modal1" id="departures">Schedule</a></li>
+                        <li class="tab non-modal"><a class="waves-effect waves-light" id="park-news">Park News</a></li>
+                        <li class="tab non-modal"><a class="waves-effect waves-light" id="plan-trip">Plan Your Trip</a></li>
+                        <!-- <li class="tab non-modal"><a class="waves-effect waves-light" id="weather">Weather</a></li> -->
                     </ul>
+                </div>
+                <div class="row" id="search-bar">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12 m12">
+                                <input placeholder="Search Parks (Example: Arches National Park)" id="input-search" type="text">
+                                <a class="waves-effect waves-light btn modal-close" id="search-np">Search</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="container" id="logo">
+                    <img src="assets/images/api/npgeek.png" id="npg-logo">
+                </div>
+                <div class="container" id="parksof-themonth">
+                    <div class="featured-parks" id="featured-parks">
+                        <h5 class="npg-container-title">Parks of the Month:</h5>
+                        <h5 class="npg-container-title">November 2019</h5>
+                            <p class="content">Each month our NPGeek Team picks three of the nations best parks to feature!</p>                        
+                            <p class="content">We look for a wide variety of parks that feature: interesting locations, scenic views, unusal interests and of course the best park trails!</p>
+                            <p class="content">Plan your next trip to one of our featured National Parks!</p>
+                            <p class="content">Happy Trails!</p>
+                        <div class="show-featured-parks" id="show-parks">
+                            <div class="row" id="card-row">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal modal-fixed-footer">
-            <h4>Students Save 20% on Select California Routes!</h4>
-            <div class="modal-footer">
-                <a href="#modal1" class="modal-close waves-effect waves-light btn btn-flat">Close</a>
+        
+        <div class="container" id="show-planned-trip">
+            <div>
+                <h5 class="npg-container-title">Plan Your Trip</h4>
+                    <p class="content">While you checkout the latest info on your favorite National Parks, we save your searches so you can revisit them anytime you please.</p>
+                    <p class="content">While out on the trail, it's comforting to know that we have your back!</p>
+                <div id="show-searched-parks">                    
+                    <div class="row" id="new-park-cards">
+
+                    </div>
+                </div>
+
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header"><img src="assets/images/icons/heart-red.png" id="sm-icon"></i>Saved Parks</div>
+                        <div class="collapsible-body">
+                            <div class="container" id="red-heart-parks">
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
+
     </main>
 
     <footer class="page-footer">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    <h5 class="white-text">Caitlan Michele Jeffrey</h5>
+                    <p class="grey-text text-lighten-4">Thank you for visiting my portfolio site!</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
@@ -148,7 +188,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="grey-text text-lighten-3" href="#!">
+                            <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/caitlan-jeffrey">
                                 <img src="./assets/images/icons/linkedin.png" class="social-media">
                             </a>
                         </li>
@@ -159,7 +199,7 @@
 
         <div class="footer-copyright">
             <div class="container">© 2019 Copyright
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                <a class="grey-text text-lighten-4 right" href="">More Links</a>
             </div>
         </div>
     </footer>
@@ -170,13 +210,15 @@
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     <!-- Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- Project JavaScript-->
     <script src="./assets/javascript/nationalpark.js"></script>
+    <script src="./assets/javascript/npg-hide-show.js"></script>
+
 
 </body>
 </html>

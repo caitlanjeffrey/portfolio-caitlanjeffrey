@@ -89,6 +89,14 @@ body {
         margin: 0;
     }
 
+    .national-park-image {
+        background-image: url(../images/api/bryce-canyon.jpg);
+        background-size: cover;
+        height: 600px;
+        padding: 0px;
+        margin: 0;
+    }
+
     /* Content & Containers */
         #container-interests, #container-contact, #container-resume {
             height: auto;

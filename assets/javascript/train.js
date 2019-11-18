@@ -11,6 +11,25 @@ $(document).ready(function(){
 
     // hide/show
     $("#train-main").hide()
+    $("table").hide()
+
+    $("#departures").on("click", function(){
+        $("#book-tickets").hide()
+        $(".card").hide()
+        $("table").show()
+        console.log("hi")
+    })
+
+    $("#buy-tickets").on("click", function(){
+        $("#book-tickets").show()
+        $(".card").show()
+        $("table").hide()
+        console.log("hello")
+    })
+
+    $(".modal-trigger").on("click", function(){
+        $(".modal").modal();
+    })
 });
 
 function windowResize() {
@@ -129,26 +148,3 @@ database.ref().orderByChild("dateAdded").on("child_added", function(childSnapsho
 }), function(errorObject){
     console.log("The read failed: " + errorObject);
 }
-
-// toggle support event listeners
-$(document).ready(function(){
-    $("table").hide()
-
-    $("#departures").on("click", function(){
-        $("#book-tickets").hide()
-        $(".card").hide()
-        $("table").show()
-        console.log("hi")
-    })
-
-    $("#buy-tickets").on("click", function(){
-        $("#book-tickets").show()
-        $(".card").show()
-        $("table").hide()
-        console.log("hello")
-    })
-
-    $(".modal-trigger").on("click", function(){
-        $(".modal").modal();
-    })
-})

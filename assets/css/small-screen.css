@@ -42,6 +42,26 @@ body {
             width: 100%;
         }
 
+        .park-nav {
+            width: 100%;
+        }
+
+        #buy-tickets, #departures {
+            color: #ffffff;
+            text-align: center;
+            height: auto;
+            width: 100%;
+            background-color: #0c40e6;
+        }
+
+        #park-news, #plan-trip, #weather {
+            color: #ffffff;
+            text-align: center;
+            height: auto;
+            width: 100%;
+            background-color: #CF865D;
+        }
+
 /* Main Section */
     main {
         background-color: #e8e8e8;
@@ -50,19 +70,26 @@ body {
         z-index: 1;
     }
 
+    #welcome {
+        padding: 400px 10px 10px 10px;
+        margin: 0;
+        font-size: 70px;
+        color: #e8e8e8;
+    }
+
+    #park-geeks {
+        padding: 275px 10px 10px 10px;
+        margin: 0;
+        font-size: 70px;
+        color: #e8e8e8;
+    }
+
     .welcome-image {
         background-image: url(../images/train-short.jpeg);
         background-size: cover;
         height: 600px;
         padding: 0px;
         margin: 0;
-    }
-
-    #welcome {
-        padding: 400px 10px 10px 10px;
-        margin: 0;
-        font-size: 70px;
-        color: #e8e8e8;
     }
 
     .database-image {
@@ -89,6 +116,14 @@ body {
         margin: 0;
     }
 
+    .national-park-image {
+        background-image: url(../images/api/bryce-canyon.jpg);
+        background-size: cover;
+        height: 600px;
+        padding: 0px;
+        margin: 0;
+    }
+
     /* Content & Containers */
         #container-interests, #container-contact, #container-resume {
             height: auto;
@@ -96,13 +131,25 @@ body {
             background-color: #ffffff;
         }
 
-        #database, #train-game, #api, #park {
+        #database, #train-game, #api {
             height: auto;
             width: 100%;
             background-color: #ffffff;
             margin-top: 75px;
         }
-        
+
+        #park, #parksof-themonth, #show-planned-trip, #red-heart-parks {
+            height: auto;
+            width: 100%;
+            background-color: #ffffff;
+        }
+
+        #red-heart-parks {
+            height: auto;
+            width: 90%;
+            background-color: #ffffff;
+        }
+
         #train-ads {
             height: auto;
             width: 100%;
@@ -124,20 +171,24 @@ body {
             margin: 0;
         }
 
+        .npg-container-title {
+            text-align: center;
+        }
+
         .icon {
             padding: 10px 0 0 10px;
+            height: 74px;
+            width: 74px;
+        }
+
+        #sm-icon {
+            height: 31px;
+            width: 31px;
+            margin-right: 5px;
         }
 
         #resume {
             width: inherit;
-        }
-
-        #buy-tickets, #departures {
-            color: #ffffff;
-            text-align: center;
-            height: auto;
-            width: 100%;
-            background-color: #0c40e6;
         }
 
         #submit {
@@ -146,7 +197,32 @@ body {
             margin: 0 0 10px 0px;
         }
 
+        #npg-logo {
+            width: 100%;
+        }
+
+        .collapsible-header {
+            background-color: #455d5c;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .collapsible-body {
+            padding: 0;
+            margin: 0;
+        }
     /* Card Views */
+        .collapsible-header {
+            background-color: #455d5c;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .collapsible-body {
+            padding: 0;
+            margin: 0;
+        }
+
         .card {
             margin: 20px 0 0 0;
         }
@@ -166,6 +242,16 @@ body {
 
         .card-title {
             margin: 0;
+        }
+
+        .park-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .park-title {
+            text-align: center;
+            font-size: 24px;
         }
 
         cite title {
@@ -250,6 +336,11 @@ body {
             background-color: #0c40e6;
             margin-left: 10px;
         }
+
+        #search-np {
+            background-color: #455d5c;
+        }
+        
 /* Table */
     #departures-table{
         overflow-x: auto;
