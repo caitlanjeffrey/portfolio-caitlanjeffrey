@@ -126,7 +126,7 @@ body {
 
     /* Content & Containers */
         #container-interests, #container-contact, #container-resume {
-            height: auto;
+            height: auto; 
             width: 100%;
             background-color: #ffffff;
         }
@@ -211,18 +211,8 @@ body {
             padding: 0;
             margin: 0;
         }
+
     /* Card Views */
-        .collapsible-header {
-            background-color: #455d5c;
-            font-weight: bold;
-            color: #ffffff;
-        }
-
-        .collapsible-body {
-            padding: 0;
-            margin: 0;
-        }
-
         .card {
             margin: 20px 0 0 0;
         }
@@ -332,7 +322,7 @@ body {
             margin-left: 10px;
         }
 
-        #buy-tickets-submit{
+        #buy-tickets-submit {
             background-color: #0c40e6;
             margin-left: 10px;
         }
@@ -340,9 +330,8 @@ body {
         #search-np {
             background-color: #455d5c;
         }
-        
 /* Table */
-    #departures-table{
+    #departures-table {
         overflow-x: auto;
     }
 

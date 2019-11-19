@@ -1,29 +1,5 @@
 
-// $(document).ready(function(){
 
-//     // mobile responsive sidenav
-//     $('.sidenav').sidenav();
-    
-//     // materialboxed trigger
-//     $('.materialboxed').materialbox();
-    
-//     $("#national-park-main").hide()
-
-//     $("#national-parks").on("click", function(){
-//         $("#national-park-main").show()
-    
-//         $(".searched-parks").hide()
-//         $("#user-saved-parks").hide()
-//         $("#main").hide()
-//     })
-
-//     $("#saved-parks").on("click", function(){
-//         $("#user-saved-parks").show()
-    
-//         $(".searched-parks").hide()
-//         $("#featured-parks").hide()
-//     })
-// })
 
 
 
@@ -204,6 +180,10 @@ function search(searchNationalPark){
                 $("#heart-grey").hide()
 
                 card.appendTo("#red-heart-parks")
+            })
+
+            $("#weather-icon").on("click", function(){
+                
             })
         }
     })
