@@ -33,6 +33,26 @@ body {
             width: 100%;
         }
 
+        .park-nav {
+            width: 100%;
+        }
+
+        #buy-tickets, #departures {
+            color: #ffffff;
+            text-align: center;
+            height: auto;
+            width: 100%;
+            background-color: #0c40e6;
+        }
+
+        #park-news, #plan-trip, #weather {
+            color: #ffffff;
+            text-align: center;
+            height: auto;
+            width: 100%;
+            background-color: #CF865D;
+        }
+
 /* Main Section */
     main {
         background-color: #e8e8e8;
@@ -41,19 +61,26 @@ body {
         z-index: 1;
     }
 
+    #welcome {
+        padding: 550px 10px 10px 50px;
+        margin: 0;
+        font-size: 70px;
+        color: #e8e8e8;
+    }
+    
+    #park-geeks {
+        padding: 325px 10px 10px 10px;
+        margin: 0;
+        font-size: 70px;
+        color: #e8e8e8;
+    }
+
     .welcome-image {
         background-image: url(../images/train-short.jpeg);
         background-size: cover;
         height: 700px;
         padding: 0px;
         margin: 0;
-    }
-
-    #welcome {
-        padding: 550px 10px 10px 50px;
-        margin: 0;
-        font-size: 70px;
-        color: #e8e8e8;
     }
 
     .database-image {
@@ -83,7 +110,6 @@ body {
     .national-park-image {
         background-image: url(../images/api/bryce-canyon.jpg);
         background-size: cover;
-        /* height: 600px; */
         padding: 0px;
         margin: 0;
     }
@@ -105,6 +131,17 @@ body {
             padding: 0 0 10px 0;
         }
 
+        #park, #parksof-themonth, #show-planned-trip, #red-heart-parks {
+            height: auto;
+            width: 90%;
+            background-color: #ffffff;
+        }
+
+        #red-heart-parks {
+            height: auto;
+            width: 90%;
+            background-color: #ffffff;
+        }
 
         .content, h5 {
             color: #6d6373;
@@ -117,26 +154,44 @@ body {
             margin: 0;
         }
 
+        .npg-container-title {
+            text-align: center;
+        }
+
         .icon {
             padding: 10px 0 0 10px;
+        }
+
+        #weather-icon {
+            height: 55px;
+            width: 55px;
+            margin-bottom: 10px;
         }
 
         #resume {
             width: 100%;
         }
 
-        #buy-tickets, #departures {
-            color: #ffffff;
-            text-align: center;
-            height: auto;
-            background-color: #0c40e6;
-            width: 200px;
-        }
-
         #submit {
             color: #ffffff;
             background-color: #0c40e6;
             margin: 0 0 10px 0px;
+        }
+
+        #logo {
+            width: 100%;
+            margin-left: 40px;
+        }
+
+        .collapsible-header {
+            background-color: #455d5c;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .collapsible-body {
+            padding: 0;
+            margin: 0;
         }
 
     /* Card Views */
@@ -163,6 +218,16 @@ body {
 
         .card-title {
             margin: 0;
+        }
+
+        .park-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .park-title {
+            text-align: center;
+            font-size: 24px;
         }
 
         cite title {
@@ -240,6 +305,10 @@ body {
         #buy-tickets-submit{
             background-color: #0c40e6;
             margin-left: 10px;
+        }
+
+        #search-np {
+            background-color: #455d5c;
         }
 
 /* Modal */
