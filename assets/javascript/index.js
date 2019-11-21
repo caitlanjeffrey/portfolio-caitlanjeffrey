@@ -1,5 +1,4 @@
 
-
 $(document).ready(function(){
 
     // supporting small screen devices with separate UI and features

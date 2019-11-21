@@ -1,6 +1,52 @@
+$(document).ready(function(){
 
+    // mobile responsive sidenav
+    $('.sidenav').sidenav();
 
+    // materialboxed trigger
+    $('.materialboxed').materialbox();
+    
+    // collapsible
+    $('.collapsible').collapsible();
 
+    $("#npgeeks-main").hide()
+
+    $("#npgeeks-tab").on("click", function(){
+        $("#npgeeks-main").show()
+        $("#search-bar").hide()
+
+        $("#main").hide()
+        $("#show-planned-trip").hide()
+    })
+
+    $("#plan-trip").on("click", function(){
+        $("#search-bar").show()
+        $("#user-saved-parks").show()
+    
+        $("#logo").hide()
+        $("#parksof-themonth").hide()
+    })
+
+    $("#park-news").on("click", function(){
+        $("#logo").show()
+        $("#parksof-themonth").show()
+
+        $("#search-bar").hide()
+        $("#user-saved-parks").hide()
+        $("#show-planned-trip").hide()
+    })
+})
+
+// creating search results for national park api
+$("#search-np").on("click", function(){
+
+    // on search feature, logging input search value
+    searchNationalPark = $("#input-search").val().trim()
+    console.log(searchNationalPark)
+
+    search(searchNationalPark);
+    $("#show-planned-trip").show()
+})
 
 
 // NATIONAL PARK API CALL
@@ -98,17 +144,6 @@
         })
     })
 
-// // creating search results for national park api
-// $("#parks-search").on("click", function(){
-
-//     // on search feature, logging input search value
-//     searchNationalPark = $("#search_park").val().trim()
-//     console.log(searchNationalPark)
-
-//     search(searchNationalPark);
-//     $(".searched-parks").show()
-// })
-
 // Search National Park API
 function search(searchNationalPark){
     var queryURLSearch = "https://developer.nps.gov/api/v1/parks?q=" + searchNationalPark + "&api_key=" + APIKey + "&fields=images";
@@ -191,130 +226,3 @@ function search(searchNationalPark){
 
 // toast feature to notify users
 M.toast({html: 'National Parks reduce hours and staff from November 30th - April 1st. <br><br> Contatct your local park for Winter Season Operating Hours and Road Closures.', classes: 'rounded'});
-
-// FIREBASE
-
-  // Firebase Configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyCi2FqKo_Pwcj7Z_ImIJ4Rlwy89QRwjOL8",
-        authDomain: "project1-18df4.firebaseapp.com",
-        databaseURL: "https://project1-18df4.firebaseio.com",
-        projectId: "project1-18df4",
-        storageBucket: "project1-18df4.appspot.com",
-        messagingSenderId: "178823515374",
-        appId: "1:178823515374:web:91f4ee2ea935188314b7ff"
-    };
-
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
-    var database = firebase.database();
-
-    var firstName = "";
-    var lastName = "";
-    var email = "";
-    var message = "";
-
-    $("#submit").on("click", function(event){
-        event.preventDefault();
-
-        firstName = $("#first_name").val().trim();
-        lastName = $("#last_name").val().trim();
-        email = $("#email").val().trim();
-        message = $("#input").val().trim();
-
-        database.ref().push({
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        message: message,
-        dateAdded: firebase.database.ServerValue.TIMESTAMP,
-        });
-    });
-
-    database.ref().orderByChild("dateAdded").on("child_added", function(childSnapshot){
-        console.log(childSnapshot.val().firstName);
-        console.log(childSnapshot.val().lastName);
-        console.log(childSnapshot.val().email);
-        console.log(childSnapshot.val().message);
-
-        var cardColumn = $("<div>").attr("class", "col s12")
-        var card = $("<div>").attr("class", "card")
-        var memberInfo = $("<div>").attr("class", "member-info")
-        var name = $("<h4>").attr("class", "member-name")
-        var emails = $("<p>").attr("id", "member-email")
-        var messages = $("<p>").attr("id", "member-message")
-
-        name.text(childSnapshot.val().firstName + " " + childSnapshot.val().lastName)
-        emails.text(childSnapshot.val().email)
-        messages.text(childSnapshot.val().message)
-
-        memberInfo.append(name)
-        memberInfo.append(emails)
-        memberInfo.append(messages)
-        card.append(memberInfo)
-        cardColumn.append(card)
-        $(".show-member-info").prepend(cardColumn)
-        $("#member-header").hide()
-        $("#leave-message").hide()
-
-    }), function(errorObject) {
-        console.log("Errors handled: " + errorObject.code);
-    }
-
-    // on click feature that begins the 'openweathermap' API call below
-    $("#weather-search").on("click", function(){
-    
-        var weatherCityName = $("#input-weather").val().trim()
-        console.log(weatherCityName)
-        weather(weatherCityName);
-    })
-
-// OPENWEATHERMAP API CALL
-var weatherAPIKey = "a441b767e75a3e228f7eed9d35168238"
-
-function weather(weatherCityName) {
-    var weatherQuery = "https://api.openweathermap.org/data/2.5/weather?q=" + weatherCityName + "&APPID=" + weatherAPIKey;
-
-    $.ajax({
-        url: weatherQuery,
-        method: "GET"
-    }).then(function(weatherResponse){
-        console.log(weatherResponse)
-
-        var weatherCityName = weatherResponse.name
-        console.log(weatherCityName)
-
-        var currentConditions = weatherResponse.weather[0].description
-        console.log(currentConditions)
-
-        // high temp calculations
-        var tempHigh = weatherResponse.main.temp_max;
-        var calcTempHigh = Math.round(((tempHigh - 273.15) * 9)/5) + 32
-        console.log("High Temp: " + calcTempHigh)
-
-        // low temp calculations
-        var tempLow = weatherResponse.main.temp_min;
-        var calcTempLow = Math.round(((tempLow - 273.15) * 9)/5) + 32
-        console.log("Low Temp: " + calcTempLow)
-
-        var humidity = weatherResponse.main.humidity
-        console.log("Humidity: " + humidity)
-        
-        // wind calculations
-        var windSpeed = weatherResponse.wind.speed;
-        var calcWindSpeed = Math.round(windSpeed * 2.20);
-        console.log("Wind Speed: " + calcWindSpeed + "mph")
-
-        // building table inputs
-        var input = $("<tr>");
-        $("tbody").append(input);
-            $(input).append("<td>" + weatherCityName);
-            $(input).append("<td>" + currentConditions);
-            $(input).append("<td>" + calcTempHigh);
-            $(input).append("<td>" + calcTempLow);
-            $(input).append("<td>" + humidity);
-            $(input).append("<td>" + calcWindSpeed)
-        })
-    }
-

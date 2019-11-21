@@ -41,6 +41,7 @@ function windowResize() {
     } else {
         $('.modal-show').show()
         $('.non-modal').hide()
+        $('#train-ads').hide()
     }
 }
 
